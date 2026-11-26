@@ -1,0 +1,98 @@
+.pwa-panel {
+  background: #f1f0e9;
+  color: #49483e;
+  border-bottom: 1px solid #dcd9cd;
+}
+.pwa-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  padding: 6px 36px;
+}
+.pwa-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+}
+.pwa-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #a17b51;
+  flex-shrink: 0;
+}
+.pwa-dot.ready {
+  background: #51745d;
+}
+.pwa-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+}
+.pwa-actions button {
+  border: 0;
+  background: transparent;
+  color: #414d43;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font: inherit;
+  font-size: 12px;
+  min-height: 36px;
+  padding: 4px 0;
+  cursor: pointer;
+}
+.pwa-actions button:disabled {
+  opacity: 0.6;
+}
+.pwa-help {
+  padding: 12px 36px 20px;
+  max-width: 980px;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.pwa-help p {
+  margin: 8px 0;
+}
+.pwa-help ul {
+  padding-left: 20px;
+  margin: 12px 0;
+}
+.pwa-help li {
+  margin: 6px 0;
+}
+.pwa-update {
+  margin: 0;
+  padding: 10px 36px;
+  background: #e6ebdf;
+  font-size: 13px;
+  line-height: 1.6;
+}
+@media (max-width: 600px) {
+  .pwa-toolbar {
+    padding: 6px 20px;
+  }
+  .pwa-help {
+    padding: 12px 20px 20px;
+  }
+  .pwa-update {
+    padding: 10px 20px;
+  }
+  .pwa-actions button {
+    min-height: 44px;
+  }
+}
+@supports (padding: max(0px)) {
+  body {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+  .app-footer {
+    padding-bottom: max(20px, env(safe-area-inset-bottom));
+  }
+  .form-actions {
+    padding-bottom: max(12px, env(safe-area-inset-bottom));
+  }
+}

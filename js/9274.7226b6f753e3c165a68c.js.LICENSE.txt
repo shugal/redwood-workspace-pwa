@@ -1,0 +1,32 @@
+/**
+   * @license
+   * Copyright (c) 2019 2026, Oracle and/or its affiliates.
+   * Licensed under The Universal Permissive License (UPL), Version 1.0
+   * as shown at https://oss.oracle.com/licenses/upl/
+   *
+   * @license
+   * Based on the Expression Evaluator 2.0.0
+   * https://github.com/donmccurdy/expression-eval
+   * under MIT License
+   * @ignore
+   */
+
+/**
+   * @license
+   * Copyright (c) 2019 2026, Oracle and/or its affiliates.
+   * Licensed under The Universal Permissive License (UPL), Version 1.0
+   * as shown at https://oss.oracle.com/licenses/upl/
+   *
+   * Portions of this code are based on on JSEP Parser
+   * @license
+   * JavaScript Expression Parser (JSEP) 1.3.8
+   * https://github.com/EricSmekens/jsep
+   */
+
+/**
+ * @license
+ * Copyright (c) 2014, 2026, Oracle and/or its affiliates.
+ * Licensed under The Universal Permissive License (UPL), Version 1.0
+ * as shown at https://oss.oracle.com/licenses/upl/
+ * @ignore
+ */
