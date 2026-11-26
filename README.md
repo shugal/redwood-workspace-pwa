@@ -1,9 +1,11 @@
 # Redwood Workspace PWA
 
-Generated deployment files for the Oracle JET Redwood starter.
+Generated deployment files only.
 
-Fictional sample data only. Saved records stay in the browser or installed app on the current device. No authentication or cross-device synchronization.
+https://shugal.github.io/redwood-workspace-pwa/
 
-Wait for **Available offline** before disconnecting. On iOS, use Safari → Share → Add to Home Screen. On Android, use Chrome → Install app / Add to Home screen.
+Open online and wait for **Available offline** before disconnecting. On iOS use Safari → Share → Add to Home Screen. On Android use Chrome → Install app / Add to Home screen.
 
-Oracle starter code retains the Universal Permissive License. Oracle JET and dependency notices remain in shipped files.
+Fictional sample data only. Saved records stay on the current device. This release includes 58 Gentelella-inspired Oracle JET Redwood page patterns, 23 visualization patterns, local demo workflows and offline access. Email, chat delivery, payments, identity and external integrations are demonstrations and are not connected to live services.
+
+Oracle starter code retains the Universal Permissive License. Dependency notices remain in shipped files.
