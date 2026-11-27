@@ -19,8 +19,6 @@
 .fusion-global-header.f-home-header { height:90px; }
 .f-header-icon { flex-shrink:0; display:inline-flex; align-items:center; justify-content:center; background:transparent; border:0; color:inherit; padding:0; width:24px; height:44px; cursor:pointer; }
 .f-header-icon:hover { background:rgba(255,255,255,.1); }
-.f-logo { display:block; flex-shrink:0; line-height:0; }
-.f-logo img { display:block; width:146px; height:50px; object-fit:contain; }
 .f-header-end { display:flex; align-items:center; gap:13px; margin-left:auto; }
 .f-user { display:grid; place-items:center; width:29px; height:29px; border:1px solid #e4e1dd; border-radius:4px; background:#fff; color:#655f5b; font-size:12px; cursor:pointer; }
 .f-global-search { position:absolute; left:28.5%; width:35.6%; height:50px; background:#46423e; display:flex; align-items:center; padding:0 6px; gap:8px; }
@@ -156,16 +154,13 @@
 .f-drawer-fields > * { flex-shrink:0; }
 .f-drawer-footer { display:flex; justify-content:flex-end; gap:12px; padding:24px 32px; border-top:1px solid #e4e1dd; background:#fbf9f8; flex-shrink:0; }
 .fusion-create-drawer :is(oj-c-input-text,oj-c-select-single) { width:100%; }
-.fusion-nav-links { display:none; }
-.appearance-fusion-exact .fusion-nav-links { display:flex; flex-direction:column; gap:8px; margin-bottom:20px; }
-.fusion-nav-links button { text-align:left; background:none; padding:12px; font:inherit; color:#161513; border:1px solid #e4e1dd; border-radius:4px; }
 @media(min-width:1440px) { .f-order-body {padding-inline:48px;} }
 @media(max-width:1439px) { .f-order-body {padding-inline:32px;} .f-home-content {max-width:1120px;margin-inline:48px;} }
 @media(min-width:1220px) { .f-home-content {margin-inline:auto;} }
 @media(max-width:1099px) { .f-home-content {margin-inline:32px;} .f-springboard {grid-template-columns:220px 1fr;gap:24px;} .f-home-cover {height:680px;} .f-table-toolbar {flex-wrap:wrap;margin-inline:0;} .f-table-view {margin-left:auto;} .f-order-heading {gap:16px;} }
 @media(max-width:699px) {
   .fusion-global-header.f-home-header,.fusion-global-header {height:60px;gap:8px;padding-inline:8px;}
-  .f-logo img {width:105px;height:36px;} .f-header-end {gap:6px;} .f-header-end .f-header-icon {width:32px;} .f-header-end .f-header-icon:nth-child(2),.f-header-end .f-header-icon:nth-child(3),.f-phone {display:none;}
+  .f-header-end {gap:6px;} .f-header-end .f-header-icon {width:32px;} .f-header-end .f-header-icon:nth-child(2),.f-header-end .f-header-icon:nth-child(3),.f-phone {display:none;}
   .f-global-search {display:none;} .f-search-popover {left:12px;width:calc(100% - 24px);}
   .appearance-fusion-exact .appearance-toolbar {padding:4px 10px;justify-content:center;gap:8px;flex-wrap:wrap;}
   .appearance-fusion-exact .appearance-caption {font-size:11px;} .appearance-fusion-exact .appearance-options button {font-size:12px;padding:6px 9px;min-height:36px;}
@@ -188,7 +183,6 @@
 @media print { .fusion-global-header,.f-bottom-tabs,.appearance-fusion-exact .appearance-toolbar {display:none!important;} .f-order-body {padding:0;} .f-table-scroll {overflow:visible;} }
 
 .workspace-shell.portal-shell.appearance-fusion-exact > .sidebar.portal-sidebar { display:none; }
-.fusion-nav-links { display:flex; flex-direction:column; gap:8px; margin-bottom:20px; }
 
 @font-face { font-family:FusionCapturedIcons; src:url("../icons/fusion/ojuxIconFont_Frequent_Rg.woff2") format("woff2"); font-display:block; }
 .f-symbol { font-family:FusionCapturedIcons!important; font-size:24px; line-height:1; font-weight:400; display:inline-block; vertical-align:middle; }
