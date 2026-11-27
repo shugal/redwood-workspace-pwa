@@ -815,7 +815,7 @@
 }
 .s-suite-navigation a {
   display: block;
-  min-height: 40px;
+  min-height: 44px;
   padding: 8px 14px;
 }
 .s-command {
@@ -1302,6 +1302,18 @@ html[data-density="compact"] .s-panel-head {
 .s-command-body {
   min-width: 0;
   width: min(560px, 75vw);
+}
+
+/* Keep native fields readable without disabling the browser's pinch zoom. */
+@media (max-width: 900px) {
+  .suite .s-native-field input,
+  .suite .s-native-field textarea,
+  .suite .s-native-field select {
+    font-size: 16px;
+  }
+  .s-suite-navigation summary {
+    min-height: 44px;
+  }
 }
 .s-page-footer {
   border-top: 1px solid var(--s-line);

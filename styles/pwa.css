@@ -31,6 +31,11 @@
   display: flex;
   flex-wrap: wrap;
   gap: 4px 12px;
+  align-items: center;
+}
+.pwa-installed {
+  font-size: 12px;
+  font-weight: 600;
 }
 .pwa-actions button {
   border: 0;
@@ -56,7 +61,8 @@
 .pwa-help p {
   margin: 8px 0;
 }
-.pwa-help ul {
+.pwa-help ul,
+.pwa-help ol {
   padding-left: 20px;
   margin: 12px 0;
 }
@@ -94,5 +100,15 @@
   }
   .form-actions {
     padding-bottom: max(12px, env(safe-area-inset-bottom));
+  }
+  .mobile-drawer {
+    padding-top: calc(28px + env(safe-area-inset-top));
+    padding-bottom: calc(28px + env(safe-area-inset-bottom));
+  }
+}
+@media (max-width: 600px) {
+  .workspace-shell.appearance-fusion .topbar {
+    padding-top: env(safe-area-inset-top);
+    height: calc(60px + env(safe-area-inset-top));
   }
 }
