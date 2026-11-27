@@ -8,8 +8,15 @@
   left: 0;
 }
 .s-page-theme > .s-grid > .s-panel:first-child { grid-column: 1 / -1; }
+/* Size this drawer's own popup container as well as its content. The JET
+   overlay minimum (320px) otherwise leaves a strip beside narrower menus. */
+div:has(> .mobile-drawer.portal-mobile-drawer) {
+  width: min(var(--suite-sidebar, 320px), 90vw);
+  min-width: 0;
+  overflow: hidden;
+}
 .mobile-drawer.portal-mobile-drawer {
-  width: min(var(--suite-sidebar, 320px), 92vw);
+  width: 100%;
   display: flex;
   flex-direction: column;
   padding: 0;
