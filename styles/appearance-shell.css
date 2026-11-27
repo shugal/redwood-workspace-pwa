@@ -1,0 +1,73 @@
+/* One overlay navigator in every appearance: closed means no rail or gutter. */
+.workspace-shell.portal-shell .workspace-main {
+  margin-left: 0;
+  width: 100%;
+  min-width: 0;
+}
+.workspace-shell.portal-shell.layout-fixed-footer > .workspace-main > .app-footer {
+  left: 0;
+}
+.s-page-theme > .s-grid > .s-panel:first-child { grid-column: 1 / -1; }
+.mobile-drawer.portal-mobile-drawer { width: min(var(--suite-sidebar, 320px), 92vw); }
+.theme-appearances {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.theme-appearances legend { margin-bottom: 12px; font-weight: 600; }
+.theme-appearances label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 20px;
+  border: 1px solid var(--s-line);
+  border-radius: var(--suite-radius, 6px);
+  cursor: pointer;
+}
+.theme-appearances label.selected { border-color: var(--suite-accent); background: var(--s-soft); }
+.theme-appearances label:focus-within { outline: 2px solid #357d9a; outline-offset: 3px; }
+.theme-appearances input { flex-shrink: 0; width: 18px; height: 18px; margin: 2px 0; accent-color: var(--suite-accent); }
+.theme-appearances strong, .theme-appearances small { display: block; }
+.theme-appearances small { color: var(--s-muted); line-height: 1.5; margin-top: 8px; }
+
+/* Cookbook cues: white app header, neutral canvas, strong sans-serif titles,
+   restrained bordered surfaces, and standard Redwood controls. */
+.workspace-shell.appearance-current {
+  --canvas: #f9f8f6;
+  --s-bg: #f9f8f6;
+  --s-soft: #f1efeb;
+  --s-line: #e4e1dc;
+  background: var(--s-bg);
+}
+.portal-shell.appearance-current .topbar {
+  min-height: 64px;
+  height: 64px;
+  background: #fff;
+  color: #161513;
+  border-bottom: 1px solid var(--s-line);
+  box-shadow: none;
+}
+.jet-product {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: inherit;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.jet-product img { width: 28px; height: 28px; }
+.jet-product strong { font-size: 18px; font-weight: 700; }
+.appearance-fusion .jet-product { display: none; }
+.appearance-current :is(main h1, .panel h2) { font-family: inherit; }
+.appearance-current main h1 { font-weight: 700; letter-spacing: -.5px; }
+.appearance-current :is(.panel, .s-panel, .metric-card) { box-shadow: none; border: 1px solid var(--s-line); border-radius: var(--suite-radius, 6px); }
+.appearance-current .portal-header-button:hover { background: #1615130a; }
+html[data-workspace-theme="dark"] .workspace-shell.appearance-current { --s-bg: #171b1c; --s-soft: #303738; --s-line: #465052; background: var(--s-bg); }
+html[data-workspace-theme="dark"] .portal-shell.appearance-current .topbar { background: #222829; color: #f5f3ee; }
+@media (max-width: 700px) {
+  .theme-appearances { grid-template-columns: 1fr; }
+  .portal-shell.appearance-current .topbar { height: auto; min-height: 104px; }
+}
