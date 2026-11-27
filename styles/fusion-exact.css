@@ -1,7 +1,7 @@
 /* Standalone compositions measured against the captured Fusion home and
    Purchase Orders pages. No captured application runtime is executed. */
 .fusion-experience-only { display: none; }
-.appearance-fusion-exact .fusion-experience-only { display: flex; }
+.appearance-fusion-exact .fusion-experience-only { display: grid; }
 .appearance-fusion-exact > .portal-sidebar,
 .appearance-fusion-exact > .workspace-main > .topbar,
 .appearance-fusion-exact > .workspace-main > .pwa-status,
@@ -15,13 +15,13 @@
 .appearance-fusion-exact .appearance-toolbar { margin:0; min-height:40px; padding:3px 24px; background:#fbf9f8; border:0; border-bottom:1px solid #e4e1dd; justify-content:flex-end; gap:12px; }
 .appearance-fusion-exact .appearance-caption { font-size:12px; }
 .appearance-fusion-exact .appearance-options button { padding:5px 12px; min-height:32px; }
-.fusion-global-header { position:relative; z-index:25; width:100%; height:50px; align-items:center; gap:5px; padding:0 12px; background:#312d2a; color:#fff; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif; }
-.fusion-global-header.f-home-header { height:90px; }
+.fusion-global-header { position:relative; z-index:25; width:100%; height:64px; grid-template-columns:32px minmax(0,640px) max-content; justify-content:space-between; align-items:center; column-gap:24px; padding:0 16px; background:#312d2a; color:#fff; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif; }
+.fusion-global-header.f-home-header { height:64px; }
 .f-header-icon { flex-shrink:0; display:inline-flex; align-items:center; justify-content:center; background:transparent; border:0; color:inherit; padding:0; width:24px; height:44px; cursor:pointer; }
 .f-header-icon:hover { background:rgba(255,255,255,.1); }
-.f-header-end { display:flex; align-items:center; gap:13px; margin-left:auto; }
+.f-header-end { display:flex; align-items:center; gap:12px; min-width:0; }
 .f-user { display:grid; place-items:center; width:29px; height:29px; border:1px solid #e4e1dd; border-radius:4px; background:#fff; color:#655f5b; font-size:12px; cursor:pointer; }
-.f-global-search { position:absolute; left:28.5%; width:35.6%; height:50px; background:#46423e; display:flex; align-items:center; padding:0 6px; gap:8px; }
+.f-global-search { position:relative; min-width:0; width:100%; height:40px; background:#46423e; display:flex; align-items:center; padding:0 6px; gap:8px; }
 .f-global-search input { min-width:0; width:100%; height:100%; color:#fff; background:none; border:0; outline-offset:1px; font:inherit; font-size:16px; }
 .f-global-search input::placeholder { color:#c1bdb9; opacity:1; }
 .f-icon { display:inline-block; flex-shrink:0; background-color:currentColor; mask-size:contain; mask-position:center; mask-repeat:no-repeat; vertical-align:middle; }
@@ -30,7 +30,7 @@
 .f-utility-popover p { font-size:14px; line-height:1.6; }
 .f-utility-popover > button { display:block; width:100%; background:none; border:0; color:inherit; padding:12px 0; text-align:left; font:inherit; cursor:pointer; }
 .f-utility-popover > button:hover { text-decoration:underline; }
-.f-search-popover { left:28.5%; right:auto; width:35.6%; }
+.f-search-popover { left:50%; right:auto; transform:translateX(-50%); width:min(640px,calc(100% - 240px)); }
 .fusion-pages { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif; font-size:16px; line-height:1.5; color:#161513; background:#fbf9f8; min-height:calc(100vh - 90px); }
 .fusion-pages *, .fusion-create-drawer * { box-sizing:border-box; }
 .fusion-pages [hidden], .fusion-pages[hidden] { display:none!important; }
@@ -159,9 +159,9 @@
 @media(min-width:1220px) { .f-home-content {margin-inline:auto;} }
 @media(max-width:1099px) { .f-home-content {margin-inline:32px;} .f-springboard {grid-template-columns:220px 1fr;gap:24px;} .f-home-cover {height:680px;} .f-table-toolbar {flex-wrap:wrap;margin-inline:0;} .f-table-view {margin-left:auto;} .f-order-heading {gap:16px;} }
 @media(max-width:699px) {
-  .fusion-global-header.f-home-header,.fusion-global-header {height:60px;gap:8px;padding-inline:8px;}
-  .f-header-end {gap:6px;} .f-header-end .f-header-icon {width:32px;} .f-header-end .f-header-icon:nth-child(2),.f-header-end .f-header-icon:nth-child(3),.f-phone {display:none;}
-  .f-global-search {display:none;} .f-search-popover {left:12px;width:calc(100% - 24px);}
+  .fusion-global-header.f-home-header,.fusion-global-header {height:64px;grid-template-columns:32px minmax(0,1fr) max-content;gap:8px;padding-inline:8px;}
+  .f-header-end {gap:6px;} .f-header-end .f-header-icon {width:32px;} .f-home-utility,.f-phone {display:none;}
+  .f-global-search input {font-size:13px;} .f-search-popover {left:12px;transform:none;width:calc(100% - 24px);}
   .appearance-fusion-exact .appearance-toolbar {padding:4px 10px;justify-content:center;gap:8px;flex-wrap:wrap;}
   .appearance-fusion-exact .appearance-caption {font-size:11px;} .appearance-fusion-exact .appearance-options button {font-size:12px;padding:6px 9px;min-height:36px;}
   .f-home-content {margin-inline:20px;padding-top:24px;} .appearance-fusion-exact .f-home h1,.f-home h1 {font-size:28px;margin-bottom:24px;}
