@@ -397,7 +397,7 @@
 }
 
 @media (max-width: 760px) {
-  .d-metrics > .s-panel:has(.d-money) {
+  .d-metrics > .s-panel:is(:has(.d-money), :has(.d-long)) {
     grid-column: 1/-1;
   }
 }

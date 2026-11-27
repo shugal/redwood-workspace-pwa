@@ -1,0 +1,56 @@
+/* Visual calibration from the Fusion home and Redwood Purchase Orders captures,
+   2026-11-27. See fusion-reference/2026-11-27 for source evidence.
+   Keep Fusion runtime CSS out of this app; installed JET controls own their styles. */
+html:not([data-workspace-theme="dark"]) .appearance-fusion {
+  --canvas: #fbf9f8;
+  --s-bg: #fbf9f8;
+  --s-soft: #f1efed;
+  --s-line: #e4e1dd;
+  --s-ink: #161513;
+  --s-muted: #655f5b;
+  --line: #e4e1dd;
+  --ink: #161513;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+    Arial, sans-serif;
+}
+
+html:not([data-workspace-theme="dark"]) .portal-shell.appearance-fusion .topbar {
+  background: #312d2a;
+}
+
+html:not([data-workspace-theme="dark"]) .appearance-fusion .page-heading::before {
+  background: #fbf9f8;
+}
+
+/* The captured collection header is flat, without the starter's diagonal motif. */
+.appearance-fusion .page-heading::after {
+  background: none;
+}
+
+/* Exact main paths from Fusion's navigation SVG assets, used as monochrome masks.
+   Preserve original SVG dimensions, aria-hidden and currentColor inheritance. */
+.appearance-fusion :is(.workspace-icon-menu, .workspace-icon-search,
+  .workspace-icon-bell, .workspace-icon-star) {
+  background-color: currentColor;
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+}
+
+.appearance-fusion :is(.workspace-icon-menu, .workspace-icon-search,
+  .workspace-icon-bell, .workspace-icon-star) > * {
+  opacity: 0;
+}
+
+.appearance-fusion .workspace-icon-menu {
+  mask-image: url("../icons/fusion-reference/navi_navigator24.svg");
+}
+.appearance-fusion .workspace-icon-search {
+  mask-image: url("../icons/fusion-reference/navi_search24.svg");
+}
+.appearance-fusion .workspace-icon-bell {
+  mask-image: url("../icons/fusion-reference/navi_bell24.svg");
+}
+.appearance-fusion .workspace-icon-star {
+  mask-image: url("../icons/fusion-reference/navi_star24.svg");
+}

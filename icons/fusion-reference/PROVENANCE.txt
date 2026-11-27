@@ -1,0 +1,3 @@
+Navigation icons extracted from the user-selected Fusion demo environment on 2026-11-27.
+Original files and source URL/checksum manifest: fusion-reference/2026-11-27/download-manifest.json.
+Normalized for CSS masks by retaining the main svg-icon paths.
