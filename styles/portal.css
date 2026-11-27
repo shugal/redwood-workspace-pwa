@@ -1,6 +1,6 @@
 /* Shared portal composition; JET controls retain their official Redwood styling. */
 .portal-shell {
-  --portal-width: 260px;
+  --portal-width: var(--suite-sidebar, 260px);
 }
 .portal-sidebar {
   background: var(--s-surface);
@@ -310,7 +310,7 @@
   .portal-shell.portal-collapsed {
     --portal-width: 76px;
   }
-  .portal-shell .workspace-main {
+  .workspace-shell.portal-shell .workspace-main {
     margin-left: var(--portal-width);
   }
   .portal-shell.portal-collapsed .portal-brand .brand > div,
@@ -323,12 +323,14 @@
   .portal-shell.portal-collapsed .portal-nav-scroll {
     padding: 10px;
   }
-  .portal-shell.layout-fixed-footer > .workspace-main > .app-footer {
+  .workspace-shell.portal-shell.layout-fixed-footer
+    > .workspace-main
+    > .app-footer {
     left: var(--portal-width);
   }
 }
 @media (max-width: 1099px) {
-  .portal-shell .workspace-main {
+  .workspace-shell.portal-shell .workspace-main {
     margin-left: 0;
   }
   .portal-shell .sidebar.portal-sidebar {
@@ -389,7 +391,7 @@
   .portal-header-actions {
     display: none !important;
   }
-  .portal-shell .workspace-main {
+  .workspace-shell.portal-shell .workspace-main {
     margin-left: 0 !important;
   }
 }
@@ -409,4 +411,12 @@
 .portal-shell .mobile-menu {
   width: 44px;
   min-height: 44px;
+}
+
+@media (max-width: 1099px) {
+  .workspace-shell.portal-shell.layout-fixed-footer
+    > .workspace-main
+    > .app-footer {
+    left: 0;
+  }
 }
