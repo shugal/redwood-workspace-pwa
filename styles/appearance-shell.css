@@ -156,3 +156,5 @@ html[data-workspace-theme="dark"] .portal-shell.appearance-current .topbar { bac
 @media (max-width:360px) {
   .workspace-shell.portal-shell .portal-account { --account-size:32px; }
 }
+
+.workspace-shell.portal-shell .portal-account .f-user { flex:none; }
