@@ -1,94 +1,37 @@
-.pwa-panel {
-  background: #f1f0e9;
-  color: #49483e;
-  border-bottom: 1px solid #dcd9cd;
+.app-status-button { position: relative; }
+.app-status-dot, .app-update-dot { position:absolute; width:6px; height:6px; border-radius:50%; right:7px; bottom:7px; box-shadow:0 0 0 2px var(--status-halo, #fff); }
+.app-status-dot.is-online { background:#2c805a; }
+.app-status-dot.is-offline { background:#8b8986; }
+.app-update-dot { right:6px; top:6px; bottom:auto; background:#c89136; }
+.app-sync-badge { position:absolute; right:2px; bottom:3px; display:grid; place-items:center; width:13px; height:13px; border-radius:50%; background:var(--status-halo,#fff); color:inherit; font-size:12px; line-height:1; }
+.appearance-fusion { --status-halo:#312d2a; }
+.app-status-details { max-width:520px; color:#312d2a; font-size:14px; line-height:1.6; }
+.app-status-summary { font-size:17px; font-weight:650; margin-top:0; }
+.app-status-details dl { display:grid; grid-template-columns:minmax(100px,1fr) 2fr; gap:12px 20px; margin:20px 0; }
+.app-status-details dt { font-weight:600; }
+.app-status-details dd { margin:0; }
+.app-status-actions { display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+.app-status-actions :is(a,button), .app-status-close { display:inline-flex; align-items:center; justify-content:center; padding:8px 14px; min-height:44px; border:1px solid #b6b1aa; border-radius:5px; background:transparent; color:inherit; font:inherit; cursor:pointer; text-decoration:none; }
+.app-status-close { background:#312d2a; color:#fff; }
+.app-status-actions :is(a,button):focus-visible,.app-status-close:focus-visible { outline:2px solid #227b99; outline-offset:3px; }
+.app-install-help { margin-top:24px; padding-top:12px; border-top:1px solid #dedbd7; }
+@media (max-width: 1200px) {
+  .workspace-shell.appearance-fusion-exact .fusion-global-header { display:flex; height:64px; padding:10px 4px; gap:0; }
+  .fusion-global-header > .f-header-icon { width:32px; }
+  .fusion-global-header .f-global-search { flex:1; min-width:36px; width:auto; margin-inline:4px; gap:4px; padding-inline:4px; }
+  .fusion-global-header .f-global-search input { font-size:13px; text-overflow:ellipsis; }
+  .fusion-global-header .f-header-end { display:flex; gap:0; }
+  .fusion-global-header .f-header-end .f-header-icon { display:inline-flex; width:32px; }
+  .fusion-global-header .f-header-end .f-user { width:32px; height:32px; margin:0; }
 }
-.pwa-toolbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 4px 20px;
-  padding: 6px 36px;
+@media (max-width: 360px) {
+  .fusion-global-header .f-global-search input::placeholder { color:transparent; }
+  .fusion-global-header > .f-header-icon,.fusion-global-header .f-header-end .f-header-icon { width:28px; }
+  .fusion-global-header .f-header-end .f-user { width:28px; height:28px; }
 }
-.pwa-status {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 12px;
-}
-.pwa-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #a17b51;
-  flex-shrink: 0;
-}
-.pwa-dot.ready {
-  background: #51745d;
-}
-.pwa-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px 12px;
-  align-items: center;
-}
-.pwa-installed {
-  font-size: 12px;
-  font-weight: 600;
-}
-.pwa-actions button {
-  border: 0;
-  background: transparent;
-  color: #414d43;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  font: inherit;
-  font-size: 12px;
-  min-height: 36px;
-  padding: 4px 0;
-  cursor: pointer;
-}
-.pwa-actions button:disabled {
-  opacity: 0.6;
-}
-.pwa-help {
-  padding: 12px 36px 20px;
-  max-width: 980px;
-  font-size: 13px;
-  line-height: 1.7;
-}
-.pwa-help p {
-  margin: 8px 0;
-}
-.pwa-help ul,
-.pwa-help ol {
-  padding-left: 20px;
-  margin: 12px 0;
-}
-.pwa-help li {
-  margin: 6px 0;
-}
-.pwa-update {
-  margin: 0;
-  padding: 10px 36px;
-  background: #e6ebdf;
-  font-size: 13px;
-  line-height: 1.6;
-}
-@media (max-width: 600px) {
-  .pwa-toolbar {
-    padding: 6px 20px;
-  }
-  .pwa-help {
-    padding: 12px 20px 20px;
-  }
-  .pwa-update {
-    padding: 10px 20px;
-  }
-  .pwa-actions button {
-    min-height: 44px;
-  }
+@media (max-width: 700px) {
+  .app-status-details dl { grid-template-columns:1fr; gap:4px; }
+  .app-status-details dd { margin-bottom:10px; }
 }
 @supports (padding: max(0px)) {
   body {
@@ -104,11 +47,5 @@
   .mobile-drawer {
     padding-top: calc(28px + env(safe-area-inset-top));
     padding-bottom: calc(28px + env(safe-area-inset-bottom));
-  }
-}
-@media (max-width: 600px) {
-  .workspace-shell.appearance-fusion .topbar {
-    padding-top: env(safe-area-inset-top);
-    height: calc(60px + env(safe-area-inset-top));
   }
 }
