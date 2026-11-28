@@ -4,7 +4,7 @@
   "short_name": "Redwood",
   "description": "58 responsive Oracle JET Redwood page patterns with device-local workflows and offline access.",
   "lang": "en",
-  "start_url": "./#/pages/index",
+  "start_url": "./#/home",
   "scope": "./",
   "display": "standalone",
   "background_color": "#f1efed",
