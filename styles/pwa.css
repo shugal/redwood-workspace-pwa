@@ -15,14 +15,18 @@
 .app-status-close { background:#312d2a; color:#fff; }
 .app-status-actions :is(a,button):focus-visible,.app-status-close:focus-visible { outline:2px solid #227b99; outline-offset:3px; }
 .app-install-help { margin-top:24px; padding-top:12px; border-top:1px solid #dedbd7; }
+.workspace-shell.appearance-fusion-exact .fusion-global-header { grid-template-columns:44px minmax(36px,640px) minmax(0,1fr); justify-content:normal; column-gap:12px; }
+.fusion-global-header > .f-header-icon,.fusion-global-header .f-header-end .f-header-icon { display:inline-flex; width:44px; }
+.fusion-global-header .f-header-end { justify-content:flex-end; gap:0; }
 @media (max-width: 1200px) {
   .workspace-shell.appearance-fusion-exact .fusion-global-header { display:flex; height:64px; padding:10px 4px; gap:0; }
-  .fusion-global-header > .f-header-icon { width:32px; }
   .fusion-global-header .f-global-search { flex:1; min-width:36px; width:auto; margin-inline:4px; gap:4px; padding-inline:4px; }
   .fusion-global-header .f-global-search input { font-size:13px; text-overflow:ellipsis; }
   .fusion-global-header .f-header-end { display:flex; gap:0; }
-  .fusion-global-header .f-header-end .f-header-icon { display:inline-flex; width:32px; }
   .fusion-global-header .f-header-end .f-user { width:32px; height:32px; margin:0; }
+}
+@media (max-width: 600px) {
+  .fusion-global-header > .f-header-icon,.fusion-global-header .f-header-end .f-header-icon { width:36px; }
 }
 @media (max-width: 360px) {
   .fusion-global-header .f-global-search input::placeholder { color:transparent; }

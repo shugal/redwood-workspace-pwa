@@ -14,11 +14,11 @@ body{margin:0;background:#fbf9f8;color:#312d2a;font:16px/1.6 system-ui,sans-seri
 </style>
 <main>
 <p>REDWOOD WORKSPACE</p>
-<h1>Update to 3.3.0</h1>
+<h1>Update to 3.3.1</h1>
 <p>This replaces the offline application files. Saved records, preferences and uploaded files stay on this device.</p>
 <p>Save edits in your other demo windows before activating the update. Reload those windows afterwards.</p>
 <div class="panel" aria-live="polite"><p id="records">Checking saved records…</p><p id="status" role="status">Ready to check for the latest application files.</p><small id="fingerprint"></small></div>
-<button id="activate" type="button">Activate 3.3.0</button>
+<button id="activate" type="button">Activate 3.3.1</button>
 <a class="open" id="open" href="./?appearance=current#/records" hidden>Open saved records</a>
 <p><a href="./">Back to demo</a></p>
 </main>
@@ -65,7 +65,7 @@ body{margin:0;background:#fbf9f8;color:#312d2a;font:16px/1.6 system-ui,sans-seri
       candidate = registration.waiting || registration.active;
       if(!candidate) throw new Error('The offline release is not ready. Retry while online.');
       if(candidate.state !== 'activated') {
-        status.textContent = 'Activating 3.3.0 while preserving saved data…';
+        status.textContent = 'Activating 3.3.1 while preserving saved data…';
         const activated = waitFor(candidate,'activated');
         candidate.postMessage({type:'ACTIVATE_UPDATE'});
         await activated;
@@ -73,7 +73,7 @@ body{margin:0;background:#fbf9f8;color:#312d2a;font:16px/1.6 system-ui,sans-seri
       if(snapshot() !== before) throw new Error('Saved browser data changed in another window during this update. Review your records before continuing. No saved data was cleared by this updater.');
       const hashAfter = await digest(localStorage.getItem(recordKey) || '');
       if(hashBefore !== hashAfter) throw new Error('The saved-record fingerprint changed. Review your records before continuing.');
-      status.textContent = '3.3.0 is active. All saved browser data is unchanged. Open saved records to verify the updated application.';
+      status.textContent = '3.3.1 is active. All saved browser data is unchanged. Open saved records to verify the updated application.';
       fingerprint.textContent = 'Saved-record SHA-256 before and after: '+hashAfter;
       activate.hidden=true;open.hidden=false;
     } catch(error) {status.textContent=error.message;activate.disabled=false;}
