@@ -1,4 +1,5 @@
 /* Preserve the captured Fusion springboard's texture, type and translucent tiles. */
+.workspace-shell.portal-shell .workspace-main > main.workspace-home-main { max-width:none; width:100%; margin:0; padding:0; }
 .workspace-home { min-height:calc(100vh - 64px); background:#305f66 url('../icons/fusion/bkgd_redwood.png') center top / cover no-repeat; color:#fff; padding:27px 48px 64px; }
 .workspace-home-inner { max-width:1120px; margin:0 auto; min-width:0; }
 .workspace-shell .fusion-pages .workspace-home h1 { margin:0 0 48px; padding:0; color:#fff; font:100 36px/1.15 Georgia,Times,"Times New Roman",serif; letter-spacing:-.4px; }
