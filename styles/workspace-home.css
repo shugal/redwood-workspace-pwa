@@ -2,7 +2,8 @@
 .workspace-home { min-height:calc(100vh - 64px); background:#305f66 url('../icons/fusion/bkgd_redwood.png') center top / cover no-repeat; color:#fff; padding:27px 48px 64px; }
 .workspace-home-inner { max-width:1120px; margin:0 auto; min-width:0; }
 .workspace-shell .fusion-pages .workspace-home h1 { margin:0 0 48px; padding:0; color:#fff; font:100 36px/1.15 Georgia,Times,"Times New Roman",serif; letter-spacing:-.4px; }
-.workspace-home-tabs { display:flex; gap:48px; overflow:auto hidden; scrollbar-width:thin; scrollbar-color:#ffffff70 transparent; border-bottom:1px solid #ffffff70; padding:0; }
+.workspace-home-tabs { display:flex; gap:48px; overflow:auto hidden; scrollbar-width:none; border-bottom:1px solid #ffffff70; padding:0; }
+.workspace-home-tabs::-webkit-scrollbar { display:none; }
 .workspace-home-tabs button { position:relative; flex:none; background:transparent; border:0; border-bottom:2px solid transparent; border-radius:0; color:#ffffffba; font:300 18px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; cursor:pointer; padding:0 0 14px; white-space:nowrap; }
 .workspace-home-tabs button[aria-selected="true"] { color:#fff; border-bottom-color:#fff; }
 .workspace-home :is(button,a):focus-visible { outline:3px solid #f1c88b; outline-offset:-3px; }
