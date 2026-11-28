@@ -53,3 +53,10 @@
     padding-bottom: calc(28px + env(safe-area-inset-bottom));
   }
 }
+
+/* Lighter optical proportions for the JET/Inspire toolbar; Fusion keeps its scale. */
+.workspace-shell.portal-shell:not(.appearance-fusion-exact) .app-status-button > svg { width:18px; height:18px; stroke-width:1.65; flex:none; }
+.workspace-shell.portal-shell:not(.appearance-fusion-exact) .app-status-dot,
+.workspace-shell.portal-shell:not(.appearance-fusion-exact) .app-update-dot { width:4px; height:4px; left:calc(50% + 6px); right:auto; top:calc(50% + 6px); bottom:auto; box-shadow:0 0 0 1px var(--status-halo,#fff); }
+.workspace-shell.portal-shell:not(.appearance-fusion-exact) .app-update-dot { top:calc(50% - 10px); }
+.workspace-shell.portal-shell:not(.appearance-fusion-exact) .app-sync-badge { width:10px; height:10px; font-size:10px; left:calc(50% + 4px); right:auto; top:calc(50% + 4px); bottom:auto; }
